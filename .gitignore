@@ -1,0 +1,16 @@
+# Sistemas operacionais
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/settings.json
+*.swp
+*.swo
+
+# Logs e temporários
+*.log
+*.tmp
+
+# Dados sensíveis — nunca versionar
+enviar.php
