@@ -17,7 +17,6 @@ hamburger.addEventListener('click', () => {
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
-// Close menu on link click
 nav.querySelectorAll('.nav__link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -56,34 +55,63 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-// ── Contact form — envia para enviar.php ─────────────────────
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', async (e) => {
+// ── Modal Proposta ────────────────────────────────────────────
+const modalOverlay = document.getElementById('modalProposta');
+const modalClose   = document.getElementById('modalClose');
+
+function openModal() {
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.modal-trigger').forEach(btn => {
+  btn.addEventListener('click', e => { e.preventDefault(); openModal(); });
+});
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Modal form submit
+const modalForm = document.getElementById('modalForm');
+if (modalForm) {
+  modalForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
+    const btn = modalForm.querySelector('button[type="submit"]');
     btn.disabled = true;
     btn.textContent = 'Enviando...';
 
-    try {
-      const res  = await fetch('enviar.php', { method: 'POST', body: new FormData(form) });
-      const json = await res.json();
+    const fd = new FormData();
+    const nome      = modalForm.querySelector('[name="nome"]').value.trim();
+    const sobrenome = modalForm.querySelector('[name="sobrenome"]').value.trim();
+    fd.append('nome',     nome + ' ' + sobrenome);
+    fd.append('email',    modalForm.querySelector('[name="email"]').value);
+    fd.append('telefone', modalForm.querySelector('[name="telefone"]').value);
+    fd.append('empresa',  modalForm.querySelector('[name="empresa"]').value || '');
+    fd.append('mensagem', 'Solicitação de proposta via site.');
 
+    try {
+      const res  = await fetch('enviar.php', { method: 'POST', body: fd });
+      const json = await res.json();
       if (json.success) {
-        form.innerHTML = `
-          <div class="form-success" style="display:block;">
-            <p style="font-size:1.5rem;margin-bottom:8px;">&#10003;</p>
-            <p><strong>Mensagem enviada com sucesso!</strong></p>
-            <p style="margin-top:8px;font-size:.92rem;">Retornaremos em até 1 dia útil. Obrigado pelo contato!</p>
+        modalForm.innerHTML = `
+          <div class="modal__success" style="display:block;">
+            <p style="font-size:1.8rem;margin-bottom:8px;">&#10003;</p>
+            <p><strong>Solicitação enviada com sucesso!</strong></p>
+            <p style="margin-top:8px;font-size:.9rem;color:#2d6a4f;">Nossa equipe entrará em contato em breve. Obrigado!</p>
           </div>`;
       } else {
         btn.disabled = false;
-        btn.textContent = 'Enviar mensagem';
+        btn.textContent = 'Enviar';
         alert(json.message || 'Erro ao enviar. Tente novamente.');
       }
     } catch {
       btn.disabled = false;
-      btn.textContent = 'Enviar mensagem';
+      btn.textContent = 'Enviar';
       alert('Erro de conexão. Verifique sua internet e tente novamente.');
     }
   });
@@ -92,12 +120,11 @@ if (form) {
 // ── Add data-reveal to key elements ──────────────────────────
 (function addRevealAttributes() {
   const targets = [
-    { sel: '.sobre__text',    delay: '' },
-    { sel: '.sobre__visual',  delay: '2' },
-    { sel: '.servico-card',   delay: '' },
-    { sel: '.diferencial',    delay: '' },
-    { sel: '.contato__info',  delay: '' },
-    { sel: '.contato__form',  delay: '2' },
+    { sel: '.sobre__text',   delay: '' },
+    { sel: '.sobre__visual', delay: '2' },
+    { sel: '.servico-card',  delay: '' },
+    { sel: '.diferencial',   delay: '' },
+    { sel: '.setor-card',    delay: '' },
   ];
   targets.forEach(({ sel, delay }) => {
     document.querySelectorAll(sel).forEach((el, i) => {
@@ -105,6 +132,5 @@ if (form) {
       if (delay || i > 0) el.setAttribute('data-reveal-delay', delay || String(i));
     });
   });
-  // Re-observe after adding attributes
   document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 })();
