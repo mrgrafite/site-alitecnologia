@@ -723,6 +723,8 @@ body {
   border-radius: 50%;
   margin: 4px;
   flex-shrink: 0;
+  animation: whatsapp-shake 2s ease infinite;
+  transform-origin: center;
 }
 .whatsapp-float__icon svg {
   width: 26px;
@@ -733,6 +735,16 @@ body {
 @keyframes float-pulse {
   0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.4); }
   50%       { box-shadow: 0 4px 32px rgba(37,211,102,.65), 0 0 0 8px rgba(37,211,102,.1); }
+}
+@keyframes whatsapp-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10%       { transform: rotate(-12deg); }
+  20%       { transform: rotate(12deg); }
+  30%       { transform: rotate(-10deg); }
+  40%       { transform: rotate(10deg); }
+  50%       { transform: rotate(-6deg); }
+  60%       { transform: rotate(6deg); }
+  70%       { transform: rotate(0deg); }
 }
 
 /* ── Responsive ───────────────────────────────────────────────── */
