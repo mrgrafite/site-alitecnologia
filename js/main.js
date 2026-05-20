@@ -60,10 +60,12 @@ const modalOverlay = document.getElementById('modalProposta');
 const modalClose   = document.getElementById('modalClose');
 
 function openModal() {
+  if (!modalOverlay) return;
   modalOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeModal() {
+  if (!modalOverlay) return;
   modalOverlay.classList.remove('open');
   document.body.style.overflow = '';
 }
@@ -72,8 +74,8 @@ document.querySelectorAll('.modal-trigger').forEach(btn => {
   btn.addEventListener('click', e => { e.preventDefault(); openModal(); });
 });
 
-modalClose.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalOverlay) modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // Modal form submit
