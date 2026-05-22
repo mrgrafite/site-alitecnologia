@@ -692,10 +692,8 @@ body {
 .ddi-picker__chevron { transition: transform .2s; flex-shrink: 0; color: var(--gray-500); }
 .ddi-picker__chevron.rotated { transform: rotate(180deg); }
 .ddi-picker__list {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  z-index: 400;
+  position: fixed;
+  z-index: 9999;
   background: #fff;
   border: 1.5px solid var(--gray-200);
   border-radius: 8px;

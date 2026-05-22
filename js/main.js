@@ -66,8 +66,15 @@ if (ddiPicker) {
   const ddiChevron = ddiBtn.querySelector('.ddi-picker__chevron');
   let ddiOpen = false;
 
-  function openDdi()  { ddiList.style.display = 'block'; ddiChevron.classList.add('rotated');    ddiOpen = true; }
-  function closeDdi() { ddiList.style.display = 'none';  ddiChevron.classList.remove('rotated'); ddiOpen = false; }
+  function openDdi() {
+    const r = ddiBtn.getBoundingClientRect();
+    ddiList.style.top  = (r.bottom + 4) + 'px';
+    ddiList.style.left = r.left + 'px';
+    ddiList.style.display = 'block';
+    ddiChevron.classList.add('rotated');
+    ddiOpen = true;
+  }
+  function closeDdi() { ddiList.style.display = 'none'; ddiChevron.classList.remove('rotated'); ddiOpen = false; }
 
   ddiBtn.addEventListener('click', e => { e.stopPropagation(); ddiOpen ? closeDdi() : openDdi(); });
 
