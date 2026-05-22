@@ -659,7 +659,7 @@ body {
   align-items: center;
   border: 1.5px solid var(--gray-200);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .phone-field:focus-within {
@@ -679,6 +679,7 @@ body {
   padding: 12px 10px;
   background: var(--light-bg);
   border: none;
+  border-radius: 6px 0 0 6px;
   font-family: var(--font);
   font-size: .9rem;
   font-weight: 600;
@@ -689,13 +690,12 @@ body {
 }
 .ddi-picker__flag { border-radius: 2px; display: block; }
 .ddi-picker__chevron { transition: transform .2s; flex-shrink: 0; color: var(--gray-500); }
-.ddi-picker__btn[aria-expanded="true"] .ddi-picker__chevron { transform: rotate(180deg); }
+.ddi-picker__chevron.rotated { transform: rotate(180deg); }
 .ddi-picker__list {
-  display: none;
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  z-index: 200;
+  z-index: 400;
   background: #fff;
   border: 1.5px solid var(--gray-200);
   border-radius: 8px;
@@ -703,11 +703,10 @@ body {
   list-style: none;
   margin: 0;
   padding: 4px 0;
-  min-width: 180px;
+  min-width: 190px;
   max-height: 240px;
   overflow-y: auto;
 }
-.ddi-picker__btn[aria-expanded="true"] + .ddi-picker__list { display: block; }
 .ddi-picker__option {
   display: flex;
   align-items: center;
