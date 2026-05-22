@@ -55,6 +55,40 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
+// ── DDI Picker ───────────────────────────────────────────────
+const ddiPicker = document.getElementById('ddiPicker');
+if (ddiPicker) {
+  const ddiBtn    = ddiPicker.querySelector('.ddi-picker__btn');
+  const ddiList   = ddiPicker.querySelector('.ddi-picker__list');
+  const ddiHidden = ddiPicker.querySelector('input[type="hidden"]');
+  const ddiFlag   = ddiBtn.querySelector('.ddi-picker__flag');
+  const ddiCode   = ddiBtn.querySelector('.ddi-picker__code');
+
+  ddiBtn.addEventListener('click', () => {
+    const open = ddiBtn.getAttribute('aria-expanded') === 'true';
+    ddiBtn.setAttribute('aria-expanded', String(!open));
+  });
+
+  ddiList.addEventListener('click', e => {
+    const opt = e.target.closest('.ddi-picker__option');
+    if (!opt) return;
+    ddiList.querySelectorAll('.ddi-picker__option').forEach(o => o.classList.remove('is-selected'));
+    opt.classList.add('is-selected');
+    const code = opt.dataset.code;
+    const cc   = opt.dataset.cc;
+    const name = opt.querySelector('.ddi-picker__name').textContent;
+    ddiFlag.src = `https://flagcdn.com/20x15/${cc}.png`;
+    ddiFlag.alt = name;
+    ddiCode.textContent = code;
+    ddiHidden.value = code;
+    ddiBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  document.addEventListener('click', e => {
+    if (!ddiPicker.contains(e.target)) ddiBtn.setAttribute('aria-expanded', 'false');
+  });
+}
+
 // ── Modal Proposta ────────────────────────────────────────────
 const modalOverlay = document.getElementById('modalProposta');
 const modalClose   = document.getElementById('modalClose');

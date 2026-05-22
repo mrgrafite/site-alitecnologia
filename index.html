@@ -311,38 +311,46 @@
         <div class="form-group">
           <label for="m-telefone">Número de telefone *</label>
           <div class="phone-field">
-            <select class="phone-field__select" name="ddi" aria-label="País">
-              <option value="+55">🇧🇷 +55</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+54">🇦🇷 +54</option>
-              <option value="+591">🇧🇴 +591</option>
-              <option value="+1">🇨🇦 +1</option>
-              <option value="+56">🇨🇱 +56</option>
-              <option value="+57">🇨🇴 +57</option>
-              <option value="+506">🇨🇷 +506</option>
-              <option value="+53">🇨🇺 +53</option>
-              <option value="+593">🇪🇨 +593</option>
-              <option value="+503">🇸🇻 +503</option>
-              <option value="+502">🇬🇹 +502</option>
-              <option value="+504">🇭🇳 +504</option>
-              <option value="+52">🇲🇽 +52</option>
-              <option value="+505">🇳🇮 +505</option>
-              <option value="+507">🇵🇦 +507</option>
-              <option value="+595">🇵🇾 +595</option>
-              <option value="+51">🇵🇪 +51</option>
-              <option value="+351">🇵🇹 +351</option>
-              <option value="+1">🇵🇷 +1</option>
-              <option value="+598">🇺🇾 +598</option>
-              <option value="+58">🇻🇪 +58</option>
-              <option value="+34">🇪🇸 +34</option>
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+33">🇫🇷 +33</option>
-              <option value="+49">🇩🇪 +49</option>
-              <option value="+39">🇮🇹 +39</option>
-              <option value="+81">🇯🇵 +81</option>
-              <option value="+86">🇨🇳 +86</option>
-              <option value="+61">🇦🇺 +61</option>
-            </select>
+            <div class="ddi-picker" id="ddiPicker">
+              <button type="button" class="ddi-picker__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar país">
+                <img class="ddi-picker__flag" src="https://flagcdn.com/20x15/br.png" alt="Brasil" width="20" height="15">
+                <span class="ddi-picker__code">+55</span>
+                <svg class="ddi-picker__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <ul class="ddi-picker__list" role="listbox" aria-label="País">
+                <li class="ddi-picker__option is-selected" role="option" data-code="+55" data-cc="br"><img src="https://flagcdn.com/20x15/br.png" alt="" width="20" height="15"><span class="ddi-picker__name">Brasil</span><span class="ddi-picker__num">+55</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="us"><img src="https://flagcdn.com/20x15/us.png" alt="" width="20" height="15"><span class="ddi-picker__name">EUA</span><span class="ddi-picker__num">+1</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+54" data-cc="ar"><img src="https://flagcdn.com/20x15/ar.png" alt="" width="20" height="15"><span class="ddi-picker__name">Argentina</span><span class="ddi-picker__num">+54</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+591" data-cc="bo"><img src="https://flagcdn.com/20x15/bo.png" alt="" width="20" height="15"><span class="ddi-picker__name">Bolívia</span><span class="ddi-picker__num">+591</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="ca"><img src="https://flagcdn.com/20x15/ca.png" alt="" width="20" height="15"><span class="ddi-picker__name">Canadá</span><span class="ddi-picker__num">+1</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+56" data-cc="cl"><img src="https://flagcdn.com/20x15/cl.png" alt="" width="20" height="15"><span class="ddi-picker__name">Chile</span><span class="ddi-picker__num">+56</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+57" data-cc="co"><img src="https://flagcdn.com/20x15/co.png" alt="" width="20" height="15"><span class="ddi-picker__name">Colômbia</span><span class="ddi-picker__num">+57</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+506" data-cc="cr"><img src="https://flagcdn.com/20x15/cr.png" alt="" width="20" height="15"><span class="ddi-picker__name">Costa Rica</span><span class="ddi-picker__num">+506</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+53" data-cc="cu"><img src="https://flagcdn.com/20x15/cu.png" alt="" width="20" height="15"><span class="ddi-picker__name">Cuba</span><span class="ddi-picker__num">+53</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+593" data-cc="ec"><img src="https://flagcdn.com/20x15/ec.png" alt="" width="20" height="15"><span class="ddi-picker__name">Equador</span><span class="ddi-picker__num">+593</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+503" data-cc="sv"><img src="https://flagcdn.com/20x15/sv.png" alt="" width="20" height="15"><span class="ddi-picker__name">El Salvador</span><span class="ddi-picker__num">+503</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+502" data-cc="gt"><img src="https://flagcdn.com/20x15/gt.png" alt="" width="20" height="15"><span class="ddi-picker__name">Guatemala</span><span class="ddi-picker__num">+502</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+504" data-cc="hn"><img src="https://flagcdn.com/20x15/hn.png" alt="" width="20" height="15"><span class="ddi-picker__name">Honduras</span><span class="ddi-picker__num">+504</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+52" data-cc="mx"><img src="https://flagcdn.com/20x15/mx.png" alt="" width="20" height="15"><span class="ddi-picker__name">México</span><span class="ddi-picker__num">+52</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+505" data-cc="ni"><img src="https://flagcdn.com/20x15/ni.png" alt="" width="20" height="15"><span class="ddi-picker__name">Nicarágua</span><span class="ddi-picker__num">+505</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+507" data-cc="pa"><img src="https://flagcdn.com/20x15/pa.png" alt="" width="20" height="15"><span class="ddi-picker__name">Panamá</span><span class="ddi-picker__num">+507</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+595" data-cc="py"><img src="https://flagcdn.com/20x15/py.png" alt="" width="20" height="15"><span class="ddi-picker__name">Paraguai</span><span class="ddi-picker__num">+595</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+51" data-cc="pe"><img src="https://flagcdn.com/20x15/pe.png" alt="" width="20" height="15"><span class="ddi-picker__name">Peru</span><span class="ddi-picker__num">+51</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+351" data-cc="pt"><img src="https://flagcdn.com/20x15/pt.png" alt="" width="20" height="15"><span class="ddi-picker__name">Portugal</span><span class="ddi-picker__num">+351</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="pr"><img src="https://flagcdn.com/20x15/pr.png" alt="" width="20" height="15"><span class="ddi-picker__name">Porto Rico</span><span class="ddi-picker__num">+1</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+598" data-cc="uy"><img src="https://flagcdn.com/20x15/uy.png" alt="" width="20" height="15"><span class="ddi-picker__name">Uruguai</span><span class="ddi-picker__num">+598</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+58" data-cc="ve"><img src="https://flagcdn.com/20x15/ve.png" alt="" width="20" height="15"><span class="ddi-picker__name">Venezuela</span><span class="ddi-picker__num">+58</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+34" data-cc="es"><img src="https://flagcdn.com/20x15/es.png" alt="" width="20" height="15"><span class="ddi-picker__name">Espanha</span><span class="ddi-picker__num">+34</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+44" data-cc="gb"><img src="https://flagcdn.com/20x15/gb.png" alt="" width="20" height="15"><span class="ddi-picker__name">Reino Unido</span><span class="ddi-picker__num">+44</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+33" data-cc="fr"><img src="https://flagcdn.com/20x15/fr.png" alt="" width="20" height="15"><span class="ddi-picker__name">França</span><span class="ddi-picker__num">+33</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+49" data-cc="de"><img src="https://flagcdn.com/20x15/de.png" alt="" width="20" height="15"><span class="ddi-picker__name">Alemanha</span><span class="ddi-picker__num">+49</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+39" data-cc="it"><img src="https://flagcdn.com/20x15/it.png" alt="" width="20" height="15"><span class="ddi-picker__name">Itália</span><span class="ddi-picker__num">+39</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+81" data-cc="jp"><img src="https://flagcdn.com/20x15/jp.png" alt="" width="20" height="15"><span class="ddi-picker__name">Japão</span><span class="ddi-picker__num">+81</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+86" data-cc="cn"><img src="https://flagcdn.com/20x15/cn.png" alt="" width="20" height="15"><span class="ddi-picker__name">China</span><span class="ddi-picker__num">+86</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+61" data-cc="au"><img src="https://flagcdn.com/20x15/au.png" alt="" width="20" height="15"><span class="ddi-picker__name">Austrália</span><span class="ddi-picker__num">+61</span></li>
+              </ul>
+              <input type="hidden" name="ddi" value="+55">
+            </div>
             <input type="tel" id="m-telefone" name="telefone" placeholder="(00) 00000-0000" required />
           </div>
         </div>
@@ -368,6 +376,6 @@
     </span>
   </a>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
