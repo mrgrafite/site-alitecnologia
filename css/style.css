@@ -666,15 +666,19 @@ body {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(46,139,239,.15);
 }
-.phone-field__prefix {
-  padding: 12px 14px;
+.phone-field__select {
+  padding: 12px 10px;
   background: var(--light-bg);
+  border: none;
   border-right: 1.5px solid var(--gray-200);
   font-size: .9rem;
   font-weight: 600;
   color: var(--navy);
-  white-space: nowrap;
-  user-select: none;
+  font-family: var(--font);
+  cursor: pointer;
+  outline: none;
+  appearance: auto;
+  min-width: 90px;
 }
 .phone-field input {
   border: none !important;

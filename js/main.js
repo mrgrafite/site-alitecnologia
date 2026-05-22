@@ -92,7 +92,9 @@ if (modalForm) {
     const sobrenome = modalForm.querySelector('[name="sobrenome"]').value.trim();
     fd.append('nome',     nome + ' ' + sobrenome);
     fd.append('email',    modalForm.querySelector('[name="email"]').value);
-    fd.append('telefone', modalForm.querySelector('[name="telefone"]').value);
+    const ddi      = modalForm.querySelector('[name="ddi"]').value;
+    const telefone = modalForm.querySelector('[name="telefone"]').value;
+    fd.append('telefone', ddi + ' ' + telefone);
     fd.append('empresa',  modalForm.querySelector('[name="empresa"]').value || '');
     fd.append('mensagem', 'Solicitação de proposta via site.');
 
