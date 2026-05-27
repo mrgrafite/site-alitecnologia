@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(gh --version)",
+      "Bash(git commit *)",
+      "WebFetch(domain:www.senior.com.br)",
+      "Bash(Get-ChildItem -Recurse \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\")",
+      "Bash(Select-Object FullName, Length)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "mcp__claude_ai_Google_Calendar__list_calendars",
+      "mcp__claude_ai_Miro__board_search_boards",
+      "Bash(Test-Path \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\.venv\\\\Scripts\\\\python.exe\")",
+      "Bash(Test-Path \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\mcp_server.py\")",
+      "PowerShell(& \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\.venv\\\\Scripts\\\\python.exe\" \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\mcp_server.py\" 2>&1)",
+      "PowerShell(Get-Command python, python3 -ErrorAction SilentlyContinue)",
+      "PowerShell(& \"C:\\\\Users\\\\marce\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe\" --version 2>&1)",
+      "PowerShell(python --version 2>&1)",
+      "PowerShell(& \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\.venv\\\\Scripts\\\\pip.exe\" install mcp beautifulsoup4 lxml requests urllib3 2>&1)",
+      "PowerShell($proc = Start-Process -FilePath \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\.venv\\\\Scripts\\\\python.exe\" -ArgumentList \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\mcp_server.py\" -RedirectStandardError \"$env:TEMP\\\\mcp_err.txt\" -RedirectStandardOutput \"$env:TEMP\\\\mcp_out.txt\" -NoNewWindow -PassThru; Start-Sleep -Seconds 3; $proc.HasExited; if \\($proc.HasExited\\) { Get-Content \"$env:TEMP\\\\mcp_err.txt\" } else { $proc.Kill\\(\\); \"Servidor iniciou sem erros\" })",
+      "Bash(claude mcp *)",
+      "PowerShell(claude mcp list 2>&1)",
+      "PowerShell($py = \"D:\\\\Trabalho\\\\Regras Senior\\\\lsp-senior-highlight-0.0.1\\\\senior_scraper\\\\.venv\\\\Scripts\\\\python.exe\"; & $py --version)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\Code\\\\User\\\\\" | Select-Object Name)",
+      "PowerShell(Test-Path \"$env:APPDATA\\\\Code\" ; Test-Path \"$env:LOCALAPPDATA\\\\Programs\\\\cursor\" ; Get-ChildItem \"$env:APPDATA\" | Where-Object {$_.Name -match -join\\(\"Code\",\"Cursor\",\"claude\",\"vscode\"\\) } | Select-Object Name)",
+      "PowerShell(Get-ChildItem -Path \"$env:APPDATA\\\\Code\" -Recurse -Filter \"settings.json\" -ErrorAction SilentlyContinue | Select-Object -First 5 FullName)",
+      "PowerShell([System.IO.Directory]::GetFiles\\(\"$env:APPDATA\\\\Code\", \"settings.json\", [System.IO.SearchOption]::AllDirectories\\) | Select-Object -First 5)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue | Select-Object Name)"
+    ]
+  }
+}
