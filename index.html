@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ali Tecnologia - Consultoria especializada em Sistemas Senior, Gestão à Vista e Integrações com outros Sistemas. Transformamos a gestão da sua empresa." />
+  <meta name="description" content="Ali Tecnologia - Consultoria especializada em Sistemas Senior, Gestão à Vista e Integrações. Transformamos a gestão da sua empresa." />
   <title>Ali Tecnologia | Consultoria Senior · Gestão à Vista · Integrações</title>
   <link rel="icon" href="favicon.png" type="image/png" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,15 +21,15 @@
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="#inicio"  class="nav__link">Início</a></li>
-          <li><a href="#sobre"   class="nav__link">Sobre</a></li>
-          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#inicio"       class="nav__link">Início</a></li>
+          <li><a href="#servicos"     class="nav__link">Serviços</a></li>
+          <li><a href="#sobre"        class="nav__link">Sobre</a></li>
           <li><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
           <li><a href="https://alitecnologia.zendesk.com/" target="_blank" rel="noopener noreferrer" class="nav__link nav__link--chamados">Chamados</a></li>
-          <li><a href="#" class="nav__link nav__link--cta modal-trigger">Ligamos para Você</a></li>
+          <li><a href="#" class="nav__link nav__link--cta modal-trigger">Solicitar Proposta</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,22 +37,117 @@
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="inicio">
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <p class="hero__eyebrow">Especialistas em Sistemas Senior</p>
-      <h1 class="hero__title">Transformamos a <strong>gestão</strong><br/>da sua empresa</h1>
-      <p class="hero__subtitle">Consultoria, implantação e integração de sistemas Senior com foco em resultados reais — do chão de fábrica à tomada de decisão.</p>
-      <div class="hero__actions">
-        <a href="#servicos" class="btn btn--primary">Conheça nossos serviços</a>
-        <a href="#" class="btn btn--outline modal-trigger">Fale com um especialista</a>
+    <div class="hero__bg-shapes">
+      <div class="hero__shape hero__shape--1"></div>
+      <div class="hero__shape hero__shape--2"></div>
+      <div class="hero__shape hero__shape--3"></div>
+    </div>
+    <div class="hero__grid-overlay"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Especialistas em Sistemas Senior</span>
+        <h1 class="hero__title">
+          A gestão da sua empresa<br/>
+          começa com a <strong>parceria certa</strong>
+        </h1>
+        <p class="hero__subtitle">
+          Consultoria, implantação e integração de sistemas Senior com foco em resultados mensuráveis — do RH ao financeiro, do chão de fábrica à diretoria.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--hero-primary modal-trigger">Solicitar Proposta</a>
+          <a href="#servicos" class="btn btn--hero-outline">Conheça nossos serviços</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hv__card hv__card--main">
+          <div class="hv__card-header">
+            <span class="hv__dot hv__dot--red"></span>
+            <span class="hv__dot hv__dot--yellow"></span>
+            <span class="hv__dot hv__dot--green"></span>
+            <span class="hv__title-bar">Dashboard Senior</span>
+          </div>
+          <div class="hv__chart">
+            <div class="hv__bars">
+              <div class="hv__bar" style="--h:42%"></div>
+              <div class="hv__bar" style="--h:67%"></div>
+              <div class="hv__bar" style="--h:51%"></div>
+              <div class="hv__bar hv__bar--accent" style="--h:88%"></div>
+              <div class="hv__bar" style="--h:63%"></div>
+              <div class="hv__bar hv__bar--accent" style="--h:79%"></div>
+            </div>
+            <div class="hv__line-chart">
+              <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                <polyline points="0,50 33,30 66,38 99,15 132,22 165,8 200,12" fill="none" stroke="rgba(93,164,255,.6)" stroke-width="2"/>
+                <polyline points="0,50 33,30 66,38 99,15 132,22 165,8 200,12 200,60 0,60" fill="url(#lineGrad)" stroke="none"/>
+                <defs>
+                  <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(93,164,255,.25)"/>
+                    <stop offset="100%" stop-color="rgba(93,164,255,0)"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="hv__metrics">
+            <div class="hv__metric">
+              <span class="hv__metric-val">+23%</span>
+              <span class="hv__metric-lbl">Eficiência</span>
+            </div>
+            <div class="hv__metric">
+              <span class="hv__metric-val hv__metric-val--green">&#x2B06; R$ 1.2M</span>
+              <span class="hv__metric-lbl">Economia gerada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hv__card hv__card--sm hv__card--top">
+          <div class="hv__sm-icon">&#128200;</div>
+          <div>
+            <strong>200+</strong>
+            <span>Projetos entregues</span>
+          </div>
+        </div>
+
+        <div class="hv__card hv__card--sm hv__card--bottom">
+          <div class="hv__sm-icon hv__sm-icon--green">&#10003;</div>
+          <div>
+            <strong>98%</strong>
+            <span>Satisfação</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero__scroll-indicator">
+
+    <div class="hero__scroll">
       <span></span>
     </div>
   </section>
 
-  <!-- ========== STATS STRIP ========== -->
+  <!-- ========== CLIENTES STRIP ========== -->
+  <div class="clientes-strip">
+    <div class="container clientes-strip__inner">
+      <p class="clientes-strip__label">Setores atendidos com excelência</p>
+      <div class="clientes-strip__logos">
+        <span class="clientes-strip__item">Indústria</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Varejo</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Logística</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Agronegócio</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Saúde</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Financeiro</span>
+        <span class="clientes-strip__sep">·</span>
+        <span class="clientes-strip__item">Construção</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== STATS ========== -->
   <div class="stats-strip">
     <div class="container stats-strip__grid">
       <div class="stats-strip__item">
@@ -67,96 +163,151 @@
         <span>Satisfação dos clientes</span>
       </div>
       <div class="stats-strip__item">
-        <strong>+15</strong>
+        <strong>15+</strong>
         <span>Módulos Senior</span>
       </div>
     </div>
   </div>
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section class="section servicos" id="servicos">
+    <div class="container">
+      <div class="section__head text-center">
+        <p class="section__eyebrow">O que fazemos</p>
+        <h2 class="section__title">Soluções completas em ecossistema Senior</h2>
+        <p class="section__subtitle">Do diagnóstico inicial ao suporte contínuo, cobrimos cada etapa da jornada do seu sistema.</p>
+      </div>
+
+      <div class="servicos__grid">
+
+        <div class="servico-card">
+          <div class="servico-card__top servico-card__top--blue"></div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 class="servico-card__title">Consultoria Senior</h3>
+            <p class="servico-card__desc">Implantação, parametrização e otimização dos módulos Senior — ERP, RH, Folha, Ponto, Financeiro e mais. Processos mapeados, sistema configurado para sua realidade.</p>
+            <ul class="servico-card__list">
+              <li>Diagnóstico e levantamento de requisitos</li>
+              <li>Implantação e migração de dados</li>
+              <li>Parametrização de módulos</li>
+              <li>Treinamento de equipes</li>
+              <li>Suporte pós-implantação</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="servico-card servico-card--featured">
+          <div class="servico-card__top servico-card__top--white"></div>
+          <div class="servico-card__badge">Destaque</div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon-wrap servico-card__icon-wrap--light">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
+            </div>
+            <h3 class="servico-card__title">Gestão à Vista</h3>
+            <p class="servico-card__desc">Dashboards e painéis interativos que transformam dados Senior em informação visual em tempo real. Decisões mais rápidas, gestão mais eficiente.</p>
+            <ul class="servico-card__list">
+              <li>Painéis de indicadores (KPIs)</li>
+              <li>Dashboards operacionais e gerenciais</li>
+              <li>Relatórios personalizados</li>
+              <li>Alertas e metas em tempo real</li>
+              <li>Visualização para TV corporativa</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-card__top servico-card__top--blue"></div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v5M8.5 17.5l-1.5-1 5-3.5 5 3.5-1.5 1"/></svg>
+            </div>
+            <h3 class="servico-card__title">Integrações</h3>
+            <p class="servico-card__desc">Conectamos o Senior a plataformas externas — e-commerce, CRM, sistemas legados e APIs. Eliminamos retrabalho e automatizamos fluxos de ponta a ponta.</p>
+            <ul class="servico-card__list">
+              <li>Integração via API REST / SOAP</li>
+              <li>Conectores ERP (TOTVS, SAP, Sankhya)</li>
+              <li>Automatização de fluxos de dados</li>
+              <li>ETL e migração de dados</li>
+              <li>Monitoramento de integrações</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ========== SOBRE ========== -->
   <section class="section sobre" id="sobre">
     <div class="container sobre__grid">
       <div class="sobre__text">
         <p class="section__eyebrow">Quem somos</p>
-        <h2 class="section__title">Experiência e precisão em cada projeto</h2>
-        <p>A <strong>Ali Tecnologia</strong> é uma empresa especializada em consultoria e implantação de sistemas <strong>Senior Sistemas</strong>. Atuamos lado a lado com nossos clientes para otimizar processos, integrar plataformas e transformar dados em inteligência de gestão.</p>
-        <p>Com uma equipe certificada e metodologia comprovada, entregamos soluções que geram eficiência operacional e visibilidade estratégica para negócios de todos os portes.</p>
+        <h2 class="section__title">Experiência e precisão<br/>em cada projeto</h2>
+        <p>A <strong>Ali Tecnologia</strong> é especializada em consultoria e implantação de sistemas <strong>Senior Sistemas</strong>. Atuamos lado a lado com nossos clientes para otimizar processos, integrar plataformas e transformar dados em inteligência de gestão.</p>
+        <p>Com equipe certificada e metodologia comprovada, entregamos soluções que geram eficiência operacional e visibilidade estratégica para negócios de todos os portes.</p>
+        <a href="#" class="btn btn--primary sobre__cta modal-trigger">Falar com um especialista</a>
       </div>
       <div class="sobre__visual">
         <div class="sobre__card sobre__card--1">
-          <div class="sobre__icon">&#128200;</div>
-          <p>Análise e diagnóstico de processos</p>
+          <div class="sobre__card-icon">&#128200;</div>
+          <div>
+            <strong>Análise e diagnóstico</strong>
+            <p>Mapeamento completo dos seus processos</p>
+          </div>
         </div>
         <div class="sobre__card sobre__card--2">
-          <div class="sobre__icon">&#9881;</div>
-          <p>Implantação e Customização</p>
+          <div class="sobre__card-icon">&#9881;</div>
+          <div>
+            <strong>Implantação e Customização</strong>
+            <p>Configurado para a realidade da sua empresa</p>
+          </div>
         </div>
         <div class="sobre__card sobre__card--3">
-          <div class="sobre__icon">&#128101;</div>
-          <p>Treinamento e suporte contínuo</p>
+          <div class="sobre__card-icon">&#128101;</div>
+          <div>
+            <strong>Treinamento e suporte</strong>
+            <p>Sua equipe capacitada e amparada</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SERVIÇOS ========== -->
-  <section class="section servicos" id="servicos">
+  <!-- ========== PROCESSO ========== -->
+  <section class="section processo" id="processo">
     <div class="container">
-      <p class="section__eyebrow text-center">O que fazemos</p>
-      <h2 class="section__title text-center">Nossos Serviços</h2>
-      <p class="section__subtitle text-center">Soluções completas para maximizar o potencial do ecossistema Senior na sua empresa.</p>
-
-      <div class="servicos__grid">
-
-        <!-- Serviço 1 -->
-        <div class="servico-card">
-          <div class="servico-card__icon-wrap servico-card__icon-wrap--blue">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h3 class="servico-card__title">Consultoria em Sistemas Senior</h3>
-          <p class="servico-card__desc">Implantação, parametrização e otimização dos módulos Senior — ERP, RH, Folha de Pagamento, Ponto e Acesso, Financeiro e muito mais. Mapeamos seus processos e configuramos o sistema para a realidade do seu negócio.</p>
-          <ul class="servico-card__list">
-            <li>Diagnóstico e levantamento de requisitos</li>
-            <li>Implantação e migração de dados</li>
-            <li>Parametrização de módulos</li>
-            <li>Treinamento de equipes</li>
-            <li>Suporte pós-implantação</li>
-          </ul>
+      <div class="section__head text-center">
+        <p class="section__eyebrow">Como trabalhamos</p>
+        <h2 class="section__title">Do diagnóstico ao resultado</h2>
+        <p class="section__subtitle">Uma metodologia clara que garante previsibilidade e qualidade em cada etapa.</p>
+      </div>
+      <div class="processo__grid">
+        <div class="processo__step">
+          <div class="processo__num">01</div>
+          <div class="processo__connector"></div>
+          <h4>Diagnóstico</h4>
+          <p>Levantamos seus processos, identificamos gargalos e definimos o escopo ideal para o seu negócio.</p>
         </div>
-
-        <!-- Serviço 2 -->
-        <div class="servico-card servico-card--featured">
-          <div class="servico-card__badge">Destaque</div>
-          <div class="servico-card__icon-wrap servico-card__icon-wrap--white">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-8"/></svg>
-          </div>
-          <h3 class="servico-card__title">Gestão à Vista</h3>
-          <p class="servico-card__desc">Dashboards e painéis interativos que transformam dados do Senior em informação visual e em tempo real. Decisões mais rápidas, gestão mais eficiente, equipes mais alinhadas.</p>
-          <ul class="servico-card__list">
-            <li>Painéis de indicadores (KPIs)</li>
-            <li>Dashboards operacionais e gerenciais</li>
-            <li>Relatórios personalizados</li>
-            <li>Alertas e metas em tempo real</li>
-            <li>Visualização para TV corporativa</li>
-          </ul>
+        <div class="processo__step">
+          <div class="processo__num">02</div>
+          <div class="processo__connector"></div>
+          <h4>Implantação</h4>
+          <p>Configuramos, parametrizamos e migramos dados com rigor técnico e entregas parciais para validação contínua.</p>
         </div>
-
-        <!-- Serviço 3 -->
-        <div class="servico-card">
-          <div class="servico-card__icon-wrap servico-card__icon-wrap--blue">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v5M8.5 17.5l-1.5-1 5-3.5 5 3.5-1.5 1"/></svg>
-          </div>
-          <h3 class="servico-card__title">Integrações com outros Sistemas</h3>
-          <p class="servico-card__desc">Conectamos o Senior a plataformas externas — e-commerce, CRM, sistemas legados, APIs de terceiros e muito mais. Eliminamos retrabalho, automatizamos fluxos e garantimos dados consistentes em todo o ecossistema.</p>
-          <ul class="servico-card__list">
-            <li>Integração via API REST / SOAP</li>
-            <li>Conectores e-commerce (TOTVS, SAP, etc.)</li>
-            <li>Automatização de fluxos de dados</li>
-            <li>ETL e migração de dados</li>
-            <li>Monitoramento de integrações</li>
-          </ul>
+        <div class="processo__step">
+          <div class="processo__num">03</div>
+          <div class="processo__connector"></div>
+          <h4>Capacitação</h4>
+          <p>Treinamos sua equipe para operar o sistema com autonomia, extraindo o máximo de cada módulo.</p>
         </div>
-
+        <div class="processo__step">
+          <div class="processo__num">04</div>
+          <div class="processo__connector processo__connector--last"></div>
+          <h4>Suporte Contínuo</h4>
+          <p>Permanecemos ao seu lado após o go-live, garantindo estabilidade, evoluções e novas integrações.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -164,38 +315,52 @@
   <!-- ========== DIFERENCIAIS ========== -->
   <section class="section diferenciais" id="diferenciais">
     <div class="container">
-      <p class="section__eyebrow text-center">Por que escolher a Ali</p>
-      <h2 class="section__title text-center">Nossos Diferenciais</h2>
+      <div class="section__head text-center">
+        <p class="section__eyebrow">Por que escolher a Ali</p>
+        <h2 class="section__title">Nossos Diferenciais</h2>
+      </div>
       <div class="diferenciais__grid">
         <div class="diferencial">
-          <div class="diferencial__icon">&#128275;</div>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
           <h4>Equipe Certificada</h4>
           <p>Profissionais com certificações Senior e vasta experiência em projetos complexos de diferentes setores.</p>
         </div>
         <div class="diferencial">
-          <div class="diferencial__icon">&#9889;</div>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
           <h4>Agilidade na Entrega</h4>
           <p>Metodologia ágil com entregas parciais e rápidas, garantindo valor desde o início do projeto.</p>
         </div>
         <div class="diferencial">
-          <div class="diferencial__icon">&#127919;</div>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
           <h4>Foco em Resultado</h4>
           <p>Trabalhamos orientados a metas mensuráveis. Cada projeto começa com objetivos claros e termina com resultados comprovados.</p>
         </div>
         <div class="diferencial">
-          <div class="diferencial__icon">&#128100;</div>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h4>Atendimento Personalizado</h4>
           <p>Cada cliente é único. Adaptamos nossas soluções à cultura, tamanho e necessidades específicas de cada empresa.</p>
         </div>
         <div class="diferencial">
-          <div class="diferencial__icon">&#128274;</div>
-          <h4>Segurança e Conformidade</h4>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h4>Segurança e LGPD</h4>
           <p>Seguimos as melhores práticas de segurança da informação e conformidade com a LGPD em todos os projetos.</p>
         </div>
         <div class="diferencial">
-          <div class="diferencial__icon">&#128222;</div>
+          <div class="diferencial__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16a2 2 0 0 1 .27.92z"/></svg>
+          </div>
           <h4>Suporte Contínuo</h4>
-          <p>Não paramos na entrega. Oferecemos suporte técnico especializado para garantir a estabilidade e evolução contínua da solução.</p>
+          <p>Não paramos na entrega. Oferecemos suporte técnico especializado para garantir estabilidade e evolução contínua.</p>
         </div>
       </div>
     </div>
@@ -204,14 +369,16 @@
   <!-- ========== SETORES ========== -->
   <section class="section setores" id="setores">
     <div class="container">
-      <p class="section__eyebrow text-center">Onde atuamos</p>
-      <h2 class="section__title text-center">Setores que Atendemos</h2>
-      <p class="section__subtitle text-center">Experiência em projetos Senior nos principais segmentos da economia brasileira.</p>
+      <div class="section__head text-center">
+        <p class="section__eyebrow">Onde atuamos</p>
+        <h2 class="section__title">Setores que Atendemos</h2>
+        <p class="section__subtitle">Experiência em projetos Senior nos principais segmentos da economia brasileira.</p>
+      </div>
       <div class="setores__grid">
 
         <div class="setor-card">
           <div class="setor-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           </div>
           <h5>Indústria</h5>
         </div>
@@ -255,22 +422,45 @@
     </div>
   </section>
 
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg-shape"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__content">
+        <h2>Pronto para transformar a gestão da sua empresa?</h2>
+        <p>Fale com nossos especialistas e descubra como o Senior pode ser configurado para o seu negócio.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="#" class="btn btn--cta-primary modal-trigger">Solicitar Proposta</a>
+        <a href="https://wa.me/553498028912" target="_blank" rel="noopener noreferrer" class="btn btn--cta-whatsapp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#inicio" class="logo">
+        <a href="#inicio" class="logo footer__logo">
           <span class="logo__ali">Ali</span><span class="logo__tec">Tecnologia</span>
         </a>
         <p>Especialistas em Sistemas Senior.<br/>Transformando dados em resultados.</p>
+        <a href="https://wa.me/553498028912" target="_blank" rel="noopener noreferrer" class="footer__whatsapp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          (34) 9802-8912
+        </a>
       </div>
       <div class="footer__links">
         <h5>Navegação</h5>
         <ul>
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#" class="modal-trigger">Solicite uma Proposta</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#setores">Setores</a></li>
         </ul>
       </div>
       <div class="footer__links">
@@ -279,11 +469,22 @@
           <li><a href="#servicos">Consultoria Senior</a></li>
           <li><a href="#servicos">Gestão à Vista</a></li>
           <li><a href="#servicos">Integrações</a></li>
+          <li><a href="#" class="modal-trigger">Solicitar Proposta</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h5>Suporte</h5>
+        <ul>
+          <li><a href="https://alitecnologia.zendesk.com/" target="_blank" rel="noopener noreferrer">Abrir Chamado</a></li>
+          <li><a href="mailto:contato@alitecnologia.inf.br">contato@alitecnologia.inf.br</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>&copy; 2026 Ali Tecnologia. Todos os direitos reservados.</p>
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 Ali Tecnologia. Todos os direitos reservados.</p>
+        <p>Parceiro autorizado <strong>Senior Sistemas</strong></p>
+      </div>
     </div>
   </footer>
 
@@ -291,8 +492,10 @@
   <div class="modal-overlay" id="modalProposta" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
       <button class="modal__close" id="modalClose" aria-label="Fechar">&#10005;</button>
-      <h2 class="modal__title" id="modalTitle">Solicite uma Proposta</h2>
-      <p class="modal__subtitle">Preencha os dados e nossa equipe entra em contato em breve.</p>
+      <div class="modal__header">
+        <h2 class="modal__title" id="modalTitle">Solicite uma Proposta</h2>
+        <p class="modal__subtitle">Preencha os dados e nossa equipe entra em contato em breve.</p>
+      </div>
       <form class="modal__form" id="modalForm">
         <div class="modal__row">
           <div class="form-group">
@@ -309,7 +512,7 @@
           <input type="email" id="m-email" name="email" placeholder="voce@empresa.com.br" required />
         </div>
         <div class="form-group">
-          <label for="m-telefone">Número de telefone *</label>
+          <label for="m-telefone">Telefone *</label>
           <div class="phone-field">
             <div class="ddi-picker" id="ddiPicker">
               <button type="button" class="ddi-picker__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Selecionar país">
@@ -319,35 +522,21 @@
               </button>
               <ul class="ddi-picker__list" role="listbox" aria-label="País" style="display:none">
                 <li class="ddi-picker__option is-selected" role="option" data-code="+55" data-cc="br"><img src="https://flagcdn.com/20x15/br.png" alt="" width="20" height="15"><span class="ddi-picker__name">Brasil</span><span class="ddi-picker__num">+55</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="us"><img src="https://flagcdn.com/20x15/us.png" alt="" width="20" height="15"><span class="ddi-picker__name">EUA</span><span class="ddi-picker__num">+1</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+54" data-cc="ar"><img src="https://flagcdn.com/20x15/ar.png" alt="" width="20" height="15"><span class="ddi-picker__name">Argentina</span><span class="ddi-picker__num">+54</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+1"   data-cc="us"><img src="https://flagcdn.com/20x15/us.png" alt="" width="20" height="15"><span class="ddi-picker__name">EUA</span><span class="ddi-picker__num">+1</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+54"  data-cc="ar"><img src="https://flagcdn.com/20x15/ar.png" alt="" width="20" height="15"><span class="ddi-picker__name">Argentina</span><span class="ddi-picker__num">+54</span></li>
                 <li class="ddi-picker__option" role="option" data-code="+591" data-cc="bo"><img src="https://flagcdn.com/20x15/bo.png" alt="" width="20" height="15"><span class="ddi-picker__name">Bolívia</span><span class="ddi-picker__num">+591</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="ca"><img src="https://flagcdn.com/20x15/ca.png" alt="" width="20" height="15"><span class="ddi-picker__name">Canadá</span><span class="ddi-picker__num">+1</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+56" data-cc="cl"><img src="https://flagcdn.com/20x15/cl.png" alt="" width="20" height="15"><span class="ddi-picker__name">Chile</span><span class="ddi-picker__num">+56</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+57" data-cc="co"><img src="https://flagcdn.com/20x15/co.png" alt="" width="20" height="15"><span class="ddi-picker__name">Colômbia</span><span class="ddi-picker__num">+57</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+506" data-cc="cr"><img src="https://flagcdn.com/20x15/cr.png" alt="" width="20" height="15"><span class="ddi-picker__name">Costa Rica</span><span class="ddi-picker__num">+506</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+53" data-cc="cu"><img src="https://flagcdn.com/20x15/cu.png" alt="" width="20" height="15"><span class="ddi-picker__name">Cuba</span><span class="ddi-picker__num">+53</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+593" data-cc="ec"><img src="https://flagcdn.com/20x15/ec.png" alt="" width="20" height="15"><span class="ddi-picker__name">Equador</span><span class="ddi-picker__num">+593</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+503" data-cc="sv"><img src="https://flagcdn.com/20x15/sv.png" alt="" width="20" height="15"><span class="ddi-picker__name">El Salvador</span><span class="ddi-picker__num">+503</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+502" data-cc="gt"><img src="https://flagcdn.com/20x15/gt.png" alt="" width="20" height="15"><span class="ddi-picker__name">Guatemala</span><span class="ddi-picker__num">+502</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+504" data-cc="hn"><img src="https://flagcdn.com/20x15/hn.png" alt="" width="20" height="15"><span class="ddi-picker__name">Honduras</span><span class="ddi-picker__num">+504</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+52" data-cc="mx"><img src="https://flagcdn.com/20x15/mx.png" alt="" width="20" height="15"><span class="ddi-picker__name">México</span><span class="ddi-picker__num">+52</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+505" data-cc="ni"><img src="https://flagcdn.com/20x15/ni.png" alt="" width="20" height="15"><span class="ddi-picker__name">Nicarágua</span><span class="ddi-picker__num">+505</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+507" data-cc="pa"><img src="https://flagcdn.com/20x15/pa.png" alt="" width="20" height="15"><span class="ddi-picker__name">Panamá</span><span class="ddi-picker__num">+507</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+1"   data-cc="ca"><img src="https://flagcdn.com/20x15/ca.png" alt="" width="20" height="15"><span class="ddi-picker__name">Canadá</span><span class="ddi-picker__num">+1</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+56"  data-cc="cl"><img src="https://flagcdn.com/20x15/cl.png" alt="" width="20" height="15"><span class="ddi-picker__name">Chile</span><span class="ddi-picker__num">+56</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+57"  data-cc="co"><img src="https://flagcdn.com/20x15/co.png" alt="" width="20" height="15"><span class="ddi-picker__name">Colômbia</span><span class="ddi-picker__num">+57</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+52"  data-cc="mx"><img src="https://flagcdn.com/20x15/mx.png" alt="" width="20" height="15"><span class="ddi-picker__name">México</span><span class="ddi-picker__num">+52</span></li>
                 <li class="ddi-picker__option" role="option" data-code="+595" data-cc="py"><img src="https://flagcdn.com/20x15/py.png" alt="" width="20" height="15"><span class="ddi-picker__name">Paraguai</span><span class="ddi-picker__num">+595</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+51" data-cc="pe"><img src="https://flagcdn.com/20x15/pe.png" alt="" width="20" height="15"><span class="ddi-picker__name">Peru</span><span class="ddi-picker__num">+51</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+51"  data-cc="pe"><img src="https://flagcdn.com/20x15/pe.png" alt="" width="20" height="15"><span class="ddi-picker__name">Peru</span><span class="ddi-picker__num">+51</span></li>
                 <li class="ddi-picker__option" role="option" data-code="+351" data-cc="pt"><img src="https://flagcdn.com/20x15/pt.png" alt="" width="20" height="15"><span class="ddi-picker__name">Portugal</span><span class="ddi-picker__num">+351</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+1" data-cc="pr"><img src="https://flagcdn.com/20x15/pr.png" alt="" width="20" height="15"><span class="ddi-picker__name">Porto Rico</span><span class="ddi-picker__num">+1</span></li>
                 <li class="ddi-picker__option" role="option" data-code="+598" data-cc="uy"><img src="https://flagcdn.com/20x15/uy.png" alt="" width="20" height="15"><span class="ddi-picker__name">Uruguai</span><span class="ddi-picker__num">+598</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+58" data-cc="ve"><img src="https://flagcdn.com/20x15/ve.png" alt="" width="20" height="15"><span class="ddi-picker__name">Venezuela</span><span class="ddi-picker__num">+58</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+34" data-cc="es"><img src="https://flagcdn.com/20x15/es.png" alt="" width="20" height="15"><span class="ddi-picker__name">Espanha</span><span class="ddi-picker__num">+34</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+44" data-cc="gb"><img src="https://flagcdn.com/20x15/gb.png" alt="" width="20" height="15"><span class="ddi-picker__name">Reino Unido</span><span class="ddi-picker__num">+44</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+33" data-cc="fr"><img src="https://flagcdn.com/20x15/fr.png" alt="" width="20" height="15"><span class="ddi-picker__name">França</span><span class="ddi-picker__num">+33</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+49" data-cc="de"><img src="https://flagcdn.com/20x15/de.png" alt="" width="20" height="15"><span class="ddi-picker__name">Alemanha</span><span class="ddi-picker__num">+49</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+39" data-cc="it"><img src="https://flagcdn.com/20x15/it.png" alt="" width="20" height="15"><span class="ddi-picker__name">Itália</span><span class="ddi-picker__num">+39</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+81" data-cc="jp"><img src="https://flagcdn.com/20x15/jp.png" alt="" width="20" height="15"><span class="ddi-picker__name">Japão</span><span class="ddi-picker__num">+81</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+86" data-cc="cn"><img src="https://flagcdn.com/20x15/cn.png" alt="" width="20" height="15"><span class="ddi-picker__name">China</span><span class="ddi-picker__num">+86</span></li>
-                <li class="ddi-picker__option" role="option" data-code="+61" data-cc="au"><img src="https://flagcdn.com/20x15/au.png" alt="" width="20" height="15"><span class="ddi-picker__name">Austrália</span><span class="ddi-picker__num">+61</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+34"  data-cc="es"><img src="https://flagcdn.com/20x15/es.png" alt="" width="20" height="15"><span class="ddi-picker__name">Espanha</span><span class="ddi-picker__num">+34</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+44"  data-cc="gb"><img src="https://flagcdn.com/20x15/gb.png" alt="" width="20" height="15"><span class="ddi-picker__name">Reino Unido</span><span class="ddi-picker__num">+44</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+33"  data-cc="fr"><img src="https://flagcdn.com/20x15/fr.png" alt="" width="20" height="15"><span class="ddi-picker__name">França</span><span class="ddi-picker__num">+33</span></li>
+                <li class="ddi-picker__option" role="option" data-code="+49"  data-cc="de"><img src="https://flagcdn.com/20x15/de.png" alt="" width="20" height="15"><span class="ddi-picker__name">Alemanha</span><span class="ddi-picker__num">+49</span></li>
               </ul>
               <input type="hidden" name="ddi" value="+55">
             </div>
@@ -362,7 +551,7 @@
           <input type="checkbox" id="m-consent" required />
           <label for="m-consent">Aceito receber comunicações e contato comercial da equipe Ali Tecnologia.</label>
         </div>
-        <button type="submit" class="btn btn--primary btn--full modal__submit">Enviar</button>
+        <button type="submit" class="btn btn--primary btn--full modal__submit">Enviar Solicitação</button>
         <div class="modal__success" id="modalSuccess"></div>
       </form>
     </div>
@@ -370,7 +559,7 @@
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/553498028912" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Vendas por WhatsApp">
-    <span class="whatsapp-float__text">Vendas por WhatsApp</span>
+    <span class="whatsapp-float__text">Fale pelo WhatsApp</span>
     <span class="whatsapp-float__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </span>
